@@ -1,23 +1,23 @@
 public class Wrapper{
 	public static void main(String[] args){
 		Producer test = new Producer();
-		int [][] holder = test.getStandard();
+		int [][] holder = test.getStandard(4);
 		int length = holder.length;
-		int count = 1;
+		int count = 0;
 		System.out.println("Length: "+length);
 		System.out.print("    ");
 		for (int i = 0; i<length;i++){
-			if (i<9){
-				System.out.print((i+1)+ "  ");	
+			if (i<=9){
+				System.out.print((i)+ "  ");	
 			}
 			else{
-				System.out.print((i+1)+ " ");
+				System.out.print((i)+ " ");
 			}
 			
 		}
 		System.out.println("");
 		for (int i=0;i<holder.length;i++){
-			if (i<9){
+			if (i<=9){
 				System.out.print(" "+count+": ");
 			}		
 			else {
@@ -31,6 +31,8 @@ public class Wrapper{
 			count++;
 		}
 		//System.out.println("");
-
+                Game testgame = new Game();
+                testgame.startGame();
+                
 	}
 }
